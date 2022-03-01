@@ -1,1203 +1,1210 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-    font-family: 'Cairo', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #cccccc4a;
+  font-family: "Cairo", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background-color: #cccccc4a;
 }
 :root {
-    --Section-background-color:#131a26;
-    --color-of-bottun:#3bd671;
-    --color-of-text: #687790;
-    --main-transation:0.5s;
-    --main-padding: 50px 0;
+  --Section-background-color: #131a26;
+  --color-of-bottun: #3bd671;
+  --color-of-text: #687790;
+  --main-transation: 0.5s;
+  --main-padding: 50px 0;
 }
 /* Start FreemWorks */
 .container {
-    margin: 0 auto;
-    padding: 0 10px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 .button {
-    width: fit-content;
-    padding: 10px 20px;
-    background-color: var(--color-of-bottun);
-    border-radius: 20px;
-    border: none;
-    transition: var(--main-transation);
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: var(--color-of-bottun);
+  border-radius: 20px;
+  border: none;
+  transition: var(--main-transation);
 }
 .button:hover {
-    background-color:#0a6e2d;
+  background-color: #0a6e2d;
 }
 .button a {
-    color: white;
-    font-weight: bolder;
+  color: white;
+  font-weight: bolder;
 }
 .Grid-of-Three-colum {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
 }
 .Grid-of-Four-colum {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
 }
 .Center-Of-Grid {
-    display: grid;
-    place-content: center;
-    text-align: center;
+  display: grid;
+  place-content: center;
+  text-align: center;
 }
 .flex-space-between {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .flex-Center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 /* End FreemWorks */
 /* Start Madia Qurei */
-@media (min-width:768px) {
-    .container {
-        width: 750px;
-    }
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
 
-@media (min-width:992px) {
-    .container {
-        width: 970px;
-    }
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
 
-@media (min-width:1200px) {
-    .container {
-        width: 1170px;
-    }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 /* End Madia Qurei */
 /* Start Header */
 header {
-        padding: 20px 0;
-        height: 100px;
-        background-color: var(--Section-background-color);
-        position: fixed;
-        width: 100vw;
-        z-index: 999999999999;
-    }
-    header .container {
-        align-items: center;
-    }
-    header .container .logo {
-        flex-basis: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    header .container .logo span {
-        display: block;
-        margin-right: 20px;
-        background-color: var(--color-of-bottun);
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-    }
-    header .container .logo .name {
-        display: flex;
-        flex-direction: column;
-        color: white;
-    }
-    header .container .logo .name h2 {
-        font-size: 40px;
-    }
-    header .container .logo .name div {
-        background-color: #faa05a;
-        padding: 1px 3px;
-        font-size: 12px;
-        width: fit-content;
-        align-self: flex-end;
-        color: white;
-    }
-    header .container .list {
-        flex-basis: 50%;
-    }
-    header .container .list ul {
-        width: 100%;
-    }
-    header .container .list ul li {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    header .container .list ul li a {
-        display: block;
-        transition:var(--main-transation) ;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    header .container .list ul li a:hover {
-        padding-left: 10px;
-        color: var(--color-of-bottun);
-    }
-    header .container form {
-        flex-basis: 25%;
-    }
-    header .container form label {
-        font-size: 18px;
-        margin-right: 20px;
-        color: white;
-        cursor: pointer;
-    }
-    header .container form input {
-        background-color: var(--color-of-bottun);
-        color: white;
-        font-size: 15px;
-        font-weight: bolder;
-        padding: 7px 10px;
-        border-radius: 25px;
-        border: 0;
-        cursor: pointer;
-    }
-    @media (max-width:991px) {
-        header {
-            height: fit-content;
-        }
-        header .container {
-            flex-wrap: wrap;
-        }
-        header .container .logo {
-            flex-basis: 100%;
-            margin-bottom: 15px;
-        }
-        header .container .list {
-            flex-basis: 65%;
-        }
-        header .container form {
-            flex-basis: 35%;
-        }
-    }
-    @media (max-width:767px) {
-        header {
-            position: relative;
-            width: 100%;
-        }
-        header .container .list {
-            flex-basis: 100%;
-            margin-bottom: 15px;
-        }
-        header .container .list ul {
-            display: flex;
-            flex-direction: column;
-        }
-        header .container .list ul li {
-            background-color: #1e2a3e;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-        header .container .list ul li a {
-            font-size: 20px;
-        }
-        header .container form {
-            flex-basis: 100%;
-            margin-bottom: 15px;
-        }
-    }
+  padding: 20px 0;
+  height: 100px;
+  background-color: var(--Section-background-color);
+  position: fixed;
+  width: 100vw;
+  z-index: 999999999999;
+}
+header .container {
+  align-items: center;
+}
+header .container .logo {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .logo span {
+  display: block;
+  margin-right: 20px;
+  background-color: var(--color-of-bottun);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+header .container .logo .name {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+header .container .logo .name h2 {
+  font-size: 40px;
+}
+header .container .logo .name div {
+  background-color: #faa05a;
+  padding: 1px 3px;
+  font-size: 12px;
+  width: fit-content;
+  align-self: flex-end;
+  color: white;
+}
+header .container .list {
+  flex-basis: 50%;
+}
+header .container .list ul {
+  width: 100%;
+}
+header .container .list ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .container .list ul li a {
+  display: block;
+  transition: var(--main-transation);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+header .container .list ul li a:hover {
+  padding-left: 10px;
+  color: var(--color-of-bottun);
+}
+header .container form {
+  flex-basis: 25%;
+}
+header .container form label {
+  font-size: 18px;
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+header .container form input {
+  background-color: var(--color-of-bottun);
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 7px 10px;
+  border-radius: 25px;
+  border: 0;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  header {
+    height: fit-content;
+  }
+  header .container {
+    flex-wrap: wrap;
+  }
+  header .container .logo {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+  header .container .list {
+    flex-basis: 65%;
+  }
+  header .container form {
+    flex-basis: 35%;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    position: relative;
+    width: 100%;
+  }
+  header .container .list {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+  header .container .list ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header .container .list ul li {
+    background-color: #1e2a3e;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  header .container .list ul li a {
+    font-size: 20px;
+  }
+  header .container form {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+}
 /* End Header */
 /* Start leading */
-    .leading {
-        padding: 200px 0 50px 0;
-        background-color: var(--Section-background-color);
-    }
-    .leading .container .text {
-        flex-basis: 50%;
-        color: white;
-    }
-    .leading .container .text h2 {
-        font-size: 46px;
-        margin-bottom: 30px;
-        position: relative;
-    }
-    .leading .container .text h2::after {
-        content: "";
-        width: 10px;
-        height: 10px;
-        background-color: var(--color-of-bottun);
-        border-radius: 50%;
-        bottom: 13px;
-        position: absolute;
-    }
-    .leading .container .text span {
-        color: var(--color-of-bottun);
-    }
-    .leading .container .text p {
-        font-weight: bolder;
-        margin-bottom: 30px;
-    }
-    .leading .container .imge  {
-        flex-basis: 48%;
-    }
-    .leading .container .imge img {
-        width: 100%;
-    }
-    .leading > p {
-        text-align: center;
-        color: #687790;
-    }
-    .leading > p span {
-        color: white;
-        font-weight: bolder;
-    }
-    @media (max-width:767px) {
-        .leading {
-            padding: var(--main-padding);
-        }
-        .leading .container {
-            flex-direction: column;
-        }
-        .leading .container .text {
-            flex-basis: 100%;
-            text-align: center;
-        }
-        .leading .container .text .button {
-            margin: 10px auto;
-        }
-        .leading .container .imge {
-            flex-basis: 100%;
-            text-align: center;
-        }
-        .leading .container .imge img {
-            width: 70%;
-        }
-    }
+.leading {
+  padding: 200px 0 50px 0;
+  background-color: var(--Section-background-color);
+}
+.leading .container .text {
+  flex-basis: 50%;
+  color: white;
+}
+.leading .container .text h2 {
+  font-size: 46px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.leading .container .text h2::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-of-bottun);
+  border-radius: 50%;
+  bottom: 13px;
+  position: absolute;
+}
+.leading .container .text span {
+  color: var(--color-of-bottun);
+}
+.leading .container .text p {
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.leading .container .imge {
+  flex-basis: 48%;
+}
+.leading .container .imge img {
+  width: 100%;
+}
+.leading > p {
+  text-align: center;
+  color: #687790;
+}
+.leading > p span {
+  color: white;
+  font-weight: bolder;
+}
+@media (max-width: 767px) {
+  .leading {
+    padding: var(--main-padding);
+  }
+  .leading .container {
+    flex-direction: column;
+  }
+  .leading .container .text {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .leading .container .text .button {
+    margin: 10px auto;
+  }
+  .leading .container .imge {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .leading .container .imge img {
+    width: 70%;
+  }
+}
 /* End leading */
 /* Start Logos */
-    .logos {
-        padding: var(--main-padding);
-    }
-    .logos .container .imge {
-        width: 100%;
-        max-width: 100%;
-    }
-    .logos .container .imge img {
-        max-width: 100%;
-    }
+.logos {
+  padding: var(--main-padding);
+}
+.logos .container .imge {
+  width: 100%;
+  max-width: 100%;
+}
+.logos .container .imge img {
+  max-width: 100%;
+}
 /* End Logos */
 /* Start monitored */
-    .monitored {
-        padding: var(--main-padding);
-        background-color: #f5f4f4;
-    }
-    .monitored .container h2 {
-        font-size: 45px;
-        font-weight: bolder;
-        max-width: 60%;
-        margin: 10px auto;
-    }
-    @media (max-width:767px) {
-        .monitored .container h2 {
-            font-size: 30px;
-            max-width: 100%;
-        }
-    }
-    .monitored .container h2 span {
-        color: var(--color-of-bottun);
-    }
-    .monitored .container .parent-of-box .box {
-        background-color: white;
-        border-radius: 10px;
-        padding: 30px;
-    }
-    .monitored .container .parent-of-box .box .imge {
-        width: 100%;
-    }
-    .monitored .container .parent-of-box .box .imge img {
-        max-width: 100%;
-        margin-bottom: 15px;
-    }
-    .monitored .container .parent-of-box .box .text h3 {
-        margin-bottom: 15px;
-        font-size: 22px;
-    }
-    .monitored .container .parent-of-box .box .text p {
-        line-height: 1.6;
-        color: var(--color-of-text);
-    }
-    .monitored .container .center {
-        margin: 20px 0 0 0;
-        text-align: center;
-    }
-    @media (max-width:767px) {
-        .monitored .container .parent-of-box .box {
-            text-align: center;
-        }
-    }
+.monitored {
+  padding: var(--main-padding);
+  background-color: #f5f4f4;
+}
+.monitored .container h2 {
+  font-size: 45px;
+  font-weight: bolder;
+  max-width: 80%;
+  text-align: center;
+  margin: 10px auto;
+}
+@media (max-width: 767px) {
+  .monitored .container h2 {
+    font-size: 30px;
+    max-width: 100%;
+  }
+}
+.monitored .container h2 span {
+  color: var(--color-of-bottun);
+}
+.monitored .container .parent-of-box .box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+.monitored .container .parent-of-box .box .imge {
+  width: 100%;
+}
+.monitored .container .parent-of-box .box .imge img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+.monitored .container .parent-of-box .box .text h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.monitored .container .parent-of-box .box .text p {
+  line-height: 1.6;
+  color: var(--color-of-text);
+}
+.monitored .container .center {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .monitored .container .parent-of-box .box {
+    text-align: center;
+  }
+}
 /* End monitored */
 /* Start features */
-    .features {
-        padding: var(--main-padding);
-    }
-    .features .container h3 {
-        text-align: center;
-        margin: 20px 0 40px 0 ;
-        font-size: 35px;
-        font-weight: bolder;
-    }
-    .features .container h3 span {
-        color: var(--color-of-bottun);
-    }
-    .features .container .parent-of-box .box h4 {
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
-    .features .container .parent-of-box .box p {
-        color: var(--color-of-text);
-        font-size: 18px;
-        line-height: 1.5;
-    }
-    @media (max-width:767px) {
-        .features .container .parent-of-box .box {
-            text-align: center;
-        }
-    }
+.features {
+  padding: var(--main-padding);
+}
+.features .container h3 {
+  text-align: center;
+  margin: 20px 0 40px 0;
+  font-size: 35px;
+  font-weight: bolder;
+}
+.features .container h3 span {
+  color: var(--color-of-bottun);
+}
+.features .container .parent-of-box .box h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.features .container .parent-of-box .box p {
+  color: var(--color-of-text);
+  font-size: 18px;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .features .container .parent-of-box .box {
+    text-align: center;
+  }
+}
 /* End features */
 /* Start Downtime */
-    .Downtime {
-        padding: var(--main-padding);
-        background-color: var(--Section-background-color);
-    }
-    .Downtime .container {
-        color: white;
-    }
-    .Downtime .container .parent-of-box {
-        flex-basis: 75%;
-    }
-    .Downtime .container .parent-of-box .box {
-        position: relative;
-        height: 100px;
-    }
-    .Downtime .container .parent-of-box .box::after {
-        width: 100%;
-        height: 100%;
-        background-color: #83878d52;
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: grid;
-        place-content: center;
-        text-align: center;
-        border-radius: 10px;
-        display: none;
-    }
-    .Downtime .container .parent-of-box .box:hover::after {
-        display: grid;
-        z-index: 9;
-    }
-    .Downtime .container .parent-of-box .box:hover .text,
-    .Downtime .container .parent-of-box .box:hover::before{
-        display: none;
-    }
-    .Downtime .container .parent-of-box .box.one::after {
-        content: "Email is the most popular way for any notification. Get alerted!";
-    }
-    .Downtime .container .parent-of-box .box.two::after {
-        content: "Email is the most popular way for any notification. Get alerted!";
-    }
-    .Downtime .container .parent-of-box .box.three::after {
-        content: "Get an automated voice call from us whenever your website is down.";
-    }
-    .Downtime .container .parent-of-box .box.four::after {
-        content: "Let us send you a private message on Twitter about your outages.";
-    }
-    .Downtime .container .parent-of-box .box.four i {
-        color: #1DA1F2;
-    }
-    .Downtime .container .parent-of-box .box.five::after {
-        content: "Slack messages are a great way to inform the entire team!";
-    }
-    .Downtime .container .parent-of-box .box.five i {
-        color: rebeccapurple;
-    }
-    .Downtime .container .parent-of-box .box.six::after {
-        content: "Integrate your Zapier account to get alerted right away.";
-    }
-    .Downtime .container .parent-of-box .box.six i {
-        color: tomato;
-    }
-    .Downtime .container .parent-of-box .box.seven::after {
-        content: "Telegram messages are great to get quickly alerted.";
-    }
-    .Downtime .container .parent-of-box .box.seven i {
-        color: #1ee5ff;
-    }
-    .Downtime .container .parent-of-box .box.eight::after {
-        content: "For advanced alerting you can setup custom webhooks to your specific system.";
-    }
-    .Downtime .container .parent-of-box .box.eight i {
-        color: orange;
-    }
-    .Downtime .container .parent-of-box .box.nine::after {
-        content: "Get important monitor status updates in your Discord messages.";
-    }
-    .Downtime .container .parent-of-box .box.nine i {
-        font-size: 25px;
-        padding:5px;
-        background-color:#7289da;
-    }
-    .Downtime .container .parent-of-box .box.nine::before {
-        content: "New";
-        background-color: var(--color-of-bottun);
-        color: white;
-        font-weight: bolder;
-        font-size: 20px;
-        padding: 1px 15px;
-        position: absolute;
-        right: 30px;
-        top: 30px;
-    }
-    .Downtime .container .parent-of-box .box i {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-    .Downtime .container .parent-of-box .box p {
-        font-weight: bolder;
-    }
-    .Downtime .container .contact-of-text {
-        flex-basis: 22%;
-    }
-    .Downtime .container .contact-of-text h2 {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-    .Downtime .container .contact-of-text h2 span {
-        color: var(--color-of-bottun);
-        font-weight: bolder;
-    }
-    .Downtime .container .contact-of-text p {
-        line-height: 1.6;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .Downtime .container .contact-of-text a {
-        text-decoration: underline;
-        font-weight: bolder;
-        font-size: 20px;
-        color: white;
-        transition: var(--main-transation);
-    }
-    .Downtime .container .contact-of-text a:hover {
-        color: var(--color-of-bottun);
-        text-decoration: none;
-        background-color: none;
-    }
-    @media (max-width:991px) {
-        .Downtime .container {
-            flex-wrap: wrap;
-        }
-        .Downtime .container .parent-of-box  {
-            flex-basis: 100%;
-        }
-        .Downtime .container .contact-of-text {
-            flex-basis: 100%;
-            text-align: center;
-        }
-    }
+.Downtime {
+  padding: var(--main-padding);
+  background-color: var(--Section-background-color);
+}
+.Downtime .container {
+  color: white;
+}
+.Downtime .container .parent-of-box {
+  flex-basis: 75%;
+}
+.Downtime .container .parent-of-box .box {
+  position: relative;
+  height: 100px;
+}
+.Downtime .container .parent-of-box .box::after {
+  width: 100%;
+  height: 100%;
+  background-color: #83878d52;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+}
+.Downtime .container .parent-of-box .box:hover::after {
+  display: grid;
+  z-index: 9;
+}
+.Downtime .container .parent-of-box .box:hover .text,
+.Downtime .container .parent-of-box .box:hover::before {
+  display: none;
+}
+.Downtime .container .parent-of-box .box.one::after {
+  content: "Email is the most popular way for any notification. Get alerted!";
+}
+.Downtime .container .parent-of-box .box.two::after {
+  content: "Email is the most popular way for any notification. Get alerted!";
+}
+.Downtime .container .parent-of-box .box.three::after {
+  content: "Get an automated voice call from us whenever your website is down.";
+}
+.Downtime .container .parent-of-box .box.four::after {
+  content: "Let us send you a private message on Twitter about your outages.";
+}
+.Downtime .container .parent-of-box .box.four i {
+  color: #1da1f2;
+}
+.Downtime .container .parent-of-box .box.five::after {
+  content: "Slack messages are a great way to inform the entire team!";
+}
+.Downtime .container .parent-of-box .box.five i {
+  color: rebeccapurple;
+}
+.Downtime .container .parent-of-box .box.six::after {
+  content: "Integrate your Zapier account to get alerted right away.";
+}
+.Downtime .container .parent-of-box .box.six i {
+  color: tomato;
+}
+.Downtime .container .parent-of-box .box.seven::after {
+  content: "Telegram messages are great to get quickly alerted.";
+}
+.Downtime .container .parent-of-box .box.seven i {
+  color: #1ee5ff;
+}
+.Downtime .container .parent-of-box .box.eight::after {
+  content: "For advanced alerting you can setup custom webhooks to your specific system.";
+}
+.Downtime .container .parent-of-box .box.eight i {
+  color: orange;
+}
+.Downtime .container .parent-of-box .box.nine::after {
+  content: "Get important monitor status updates in your Discord messages.";
+}
+.Downtime .container .parent-of-box .box.nine i {
+  font-size: 25px;
+  padding: 5px;
+  background-color: #7289da;
+}
+.Downtime .container .parent-of-box .box.nine::before {
+  content: "New";
+  background-color: var(--color-of-bottun);
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 1px 15px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.Downtime .container .parent-of-box .box i {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.Downtime .container .parent-of-box .box p {
+  font-weight: bolder;
+}
+.Downtime .container .contact-of-text {
+  flex-basis: 22%;
+}
+.Downtime .container .contact-of-text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.Downtime .container .contact-of-text h2 span {
+  color: var(--color-of-bottun);
+  font-weight: bolder;
+}
+.Downtime .container .contact-of-text p {
+  line-height: 1.6;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.Downtime .container .contact-of-text a {
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 20px;
+  color: white;
+  transition: var(--main-transation);
+}
+.Downtime .container .contact-of-text a:hover {
+  color: var(--color-of-bottun);
+  text-decoration: none;
+  background-color: none;
+}
+@media (max-width: 991px) {
+  .Downtime .container {
+    flex-wrap: wrap;
+  }
+  .Downtime .container .parent-of-box {
+    flex-basis: 100%;
+  }
+  .Downtime .container .contact-of-text {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
 /* End Downtime */
 /* Start Uptime */
-    .Uptime {
-        padding: var(--main-padding);
-    }
-    .Uptime .container .imge {
-        flex-basis: 48%;
-        text-align: center;
-        background-color: var(--color-of-bottun);
-        border-radius: 50%;
-    }
-    .Uptime .container .imge img {
-        width: 100%;
-    }
-    .Uptime .container .text {
-        flex-basis: 48%;
-    }
-    .Uptime .container .text h2 {
-        font-size: 45px;
-        font-weight: bolder;
-        margin-bottom:40px;
-    }
-    .Uptime .container .text h2 span {
-        color: var(--color-of-bottun);
-    }
-    .Uptime .container .text p {
-        font-weight: bold;
-        line-height:1.6;
-        font-size: 18px;
-        margin-bottom:40px;
-    }
-    .Uptime .container .text .links img {
-        height: 100%;
-        margin-left: 15px;
-    }
-    @media (max-width:991px) {
-        .Uptime .container {
-            flex-wrap: wrap;
-        }
-        .Uptime .container .imge {
-            flex-basis: 100%;
-            margin-bottom: 50px;
-        }
+.Uptime {
+  padding: var(--main-padding);
+}
+.Uptime .container .imge {
+  flex-basis: 48%;
+  text-align: center;
+  background-color: var(--color-of-bottun);
+  border-radius: 50%;
+}
+.Uptime .container .imge img {
+  width: 100%;
+}
+.Uptime .container .text {
+  flex-basis: 48%;
+}
+.Uptime .container .text h2 {
+  font-size: 45px;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+.Uptime .container .text h2 span {
+  color: var(--color-of-bottun);
+}
+.Uptime .container .text p {
+  font-weight: bold;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.Uptime .container .text .links img {
+  height: 100%;
+  margin-left: 15px;
+}
+@media (max-width: 991px) {
+  .Uptime .container {
+    flex-wrap: wrap;
+  }
+  .Uptime .container .imge {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
 
-        .Uptime .container .imge img {
-            width: 60%;
-        }
-        .Uptime .container .text {
-            flex-basis: 100%;
-            text-align: center;
-            max-width: 100%;
-        }
-    }
+  .Uptime .container .imge img {
+    width: 60%;
+  }
+  .Uptime .container .text {
+    flex-basis: 100%;
+    text-align: center;
+    max-width: 100%;
+  }
+}
 /* End Uptime */
 /* start Inform */
-    .Inform {
-        padding: var(--main-padding);
-    }
-    .Inform .container {
-        border-top: 1px solid #ccc;
-    }
-    .Inform .container .text {
-        flex-basis: 48%;
-    }
-    .Inform .container .text h2 {
-        font-size: 45px;
-        font-weight: bolder;
-        margin-bottom: 30px;
-    }
-    .Inform .container .text h2 span {
-        color: var(--color-of-bottun);
-    }
-    .Inform .container .text p {
-        line-height: 1.6;
-        font-size: 18px;
-        margin-bottom: 30px;
-        font-weight: bold;
-    }
-    .Inform .container .links a {
-        color: var(--color-of-bottun);
-        text-decoration: underline;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .Inform .container .imge {
-        flex-basis: 48%;
-        background-color: var(--color-of-bottun);
-        border-radius: 50%;
-        padding: 70px 0;
-    }
-    .Inform .container .imge img {
-        width: 520px;
-        height: 225px;
-        border: 1px solid #ccc;
-        margin-left: -100px;
-    }
-    @media (max-width:1199px) {
-        .Inform .container .imge img {
-            width:400px;
-            margin-left: 0;
-        }
-    }
-    @media (max-width:991px) {
-        .Inform .container {
-            flex-wrap: wrap;
-        }
-        .Inform .container .text {
-            flex-basis: 100%;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .Inform .container .imge {
-            padding: 0;
-            background-color: transparent;
-            flex-basis: 100%;
-        }
-        .Inform .container .imge img {
-            width: 100%;
-            margin-left: 0;
-        }
-    }
+.Inform {
+  padding: var(--main-padding);
+}
+.Inform .container {
+  border-top: 1px solid #ccc;
+}
+.Inform .container .text {
+  flex-basis: 48%;
+}
+.Inform .container .text h2 {
+  font-size: 45px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.Inform .container .text h2 span {
+  color: var(--color-of-bottun);
+}
+.Inform .container .text p {
+  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.Inform .container .links a {
+  color: var(--color-of-bottun);
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: bold;
+}
+.Inform .container .imge {
+  flex-basis: 48%;
+  background-color: var(--color-of-bottun);
+  border-radius: 50%;
+  padding: 70px 0;
+}
+.Inform .container .imge img {
+  width: 520px;
+  height: 225px;
+  border: 1px solid #ccc;
+  margin-left: -100px;
+}
+@media (max-width: 1199px) {
+  .Inform .container .imge img {
+    width: 400px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .Inform .container {
+    flex-wrap: wrap;
+  }
+  .Inform .container .text {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .Inform .container .imge {
+    padding: 0;
+    background-color: transparent;
+    flex-basis: 100%;
+  }
+  .Inform .container .imge img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 /* End Inform */
 /* Start endpoints */
-    .endpoints {
-        padding: var(--main-padding);
-        background-color: var(--Section-background-color);
-        user-select: none;
-    }
-    .endpoints .container {
-        text-align: center;
-    }
-    .endpoints .container q {
-        font-size: 40px;
-        display: block;
-        color: white;
-        margin-bottom: 20px;
-    }
-    .endpoints .container q span {
-        color: var(--color-of-bottun);
-    }
-    .endpoints .container .imge {
-        align-items: center;
-    }
-    .endpoints .container img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
-    .endpoints .container a {
-        color: var(--color-of-bottun);
-        font-size: 25px;
-        margin-left: 20px;
-    }
-    .endpoints .icone {
-        display: flex;
-        width: fit-content;
-        height: fit-content;
-        margin: 10px auto;
-    }
-    .endpoints .icone span {
-        margin-left: 4px;
-        width: 15px;
-        height: 15px;
-        background-color: var(--color-of-text);
-        border-radius: 50%;
-    }
-    .endpoints .icone span.active {
-        background-color: var(--color-of-bottun);
-    }
-    @media (max-width:767px) {
-        .endpoints .container q {
-            font-size: 25px;
-        }
-        .endpoints .container .imge {
-            flex-wrap: wrap;
-        }
-        .endpoints .container .imge a {
-            flex-basis: 100%;
-        }
-    }
+.endpoints {
+  padding: var(--main-padding);
+  background-color: var(--Section-background-color);
+  user-select: none;
+}
+.endpoints .container {
+  text-align: center;
+}
+.endpoints .container q {
+  font-size: 40px;
+  display: block;
+  color: white;
+  margin-bottom: 20px;
+}
+.endpoints .container q span {
+  color: var(--color-of-bottun);
+}
+.endpoints .container .imge {
+  align-items: center;
+}
+.endpoints .container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.endpoints .container a {
+  color: var(--color-of-bottun);
+  font-size: 25px;
+  margin-left: 20px;
+}
+.endpoints .icone {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: 10px auto;
+}
+.endpoints .icone span {
+  margin-left: 4px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-of-text);
+  border-radius: 50%;
+}
+.endpoints .icone span.active {
+  background-color: var(--color-of-bottun);
+}
+@media (max-width: 767px) {
+  .endpoints .container q {
+    font-size: 25px;
+  }
+  .endpoints .container .imge {
+    flex-wrap: wrap;
+  }
+  .endpoints .container .imge a {
+    flex-basis: 100%;
+  }
+}
 /* End endpoints */
 /* Start pricing */
-    .pricing {
-        padding: var(--main-padding);
-    }
-    .pricing .container .header-of-pricing {
-        text-align: center;
-        margin-bottom: 100px;
-    }
-    .pricing .container .header-of-pricing h2 {
-        font-size: 50px;
-        font-weight: bolder;
-        margin-bottom: 30px;
-    }
-    .pricing .container .header-of-pricing h2 span {
-        color: var(--color-of-bottun);
-    }
-    .pricing .container .header-of-pricing .icone {
-        align-items: center;
-    }
-    .pricing .container .header-of-pricing .icone .annual {
-        margin-right: 15px;
-    }
-    .pricing .container .header-of-pricing .icone .annual p {
-        margin-bottom: 10px;
-        font-weight: bold;
-        font-size: 18px;
-    }
-    .pricing .container .header-of-pricing .icone .annual a {
-        display: block;
-        background-color: var(--color-of-bottun);
-        padding: 2px 8px;
-        color: white;
-        font-weight: bold;
-    }
-    .pricing .container .header-of-pricing .icone span {
-        display: block;
-        background-color: black;
-        width: 60px;
-        height: 20px;
-        border-radius: 10px;
-    }
-    .pricing .container .header-of-pricing .icone span span {
-        display: block;
-        background-color: var(--color-of-bottun);
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        margin: 2px;
-    }
-    .pricing .container .header-of-pricing .icone p {
-        margin-left: 15px;
-        color: var(--color-of-text);
-        font-size: 18px;
-        font-weight: bolder;
-    }
-    .pricing .container .parent-of-boxs .box {
-        background-color: white;
-        padding: 40px;
-        border-radius: 20px;
-    }
-    .pricing .container .parent-of-boxs .box .header-of-box {
-        display: flex;
-        justify-content: space-between;
-    }
+.pricing {
+  padding: var(--main-padding);
+}
+.pricing .container .header-of-pricing {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.pricing .container .header-of-pricing h2 {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.pricing .container .header-of-pricing h2 span {
+  color: var(--color-of-bottun);
+}
+.pricing .container .header-of-pricing .icone {
+  align-items: center;
+}
+.pricing .container .header-of-pricing .icone .annual {
+  margin-right: 15px;
+}
+.pricing .container .header-of-pricing .icone .annual p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.pricing .container .header-of-pricing .icone .annual a {
+  display: block;
+  background-color: var(--color-of-bottun);
+  padding: 2px 8px;
+  color: white;
+  font-weight: bold;
+}
+.pricing .container .header-of-pricing .icone span {
+  display: block;
+  background-color: black;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+}
+.pricing .container .header-of-pricing .icone span span {
+  display: block;
+  background-color: var(--color-of-bottun);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 2px;
+}
+.pricing .container .header-of-pricing .icone p {
+  margin-left: 15px;
+  color: var(--color-of-text);
+  font-size: 18px;
+  font-weight: bolder;
+}
+.pricing .container .parent-of-boxs .box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+.pricing .container .parent-of-boxs .box .header-of-box {
+  display: flex;
+  justify-content: space-between;
+}
 
-    .pricing .container .parent-of-boxs .box.Free .header-of-box .text h2 {
-        font-size: 35px;
-        font-weight: bolder;
-        margin-bottom: 30px;
-    }
-    .pricing .container .parent-of-boxs .box.Free .header-of-box .text p {
-        color: var(--color-of-text);
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-    .pricing .container .parent-of-boxs .box.Free .header-of-box .text h3 {
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    .pricing .container .parent-of-boxs .box.Free .header-of-box .text h5 {
-        font-weight: bold;
-        margin-bottom: 50px;
-        font-size: 18px;
-    }
-    .pricing .container .parent-of-boxs  img {
-        width: 50px;
-        height: 50px;
-    }
-    .pricing .container .parent-of-boxs .box.Free .button,
-    .pricing .container .parent-of-boxs .box.Enterprise .button {
-        margin-bottom: 50px;
-        background-color: var(--color-of-text);
-    }
-    .pricing .container .parent-of-boxs .box.Free .button:hover,
-    .pricing .container .parent-of-boxs .box.Enterprise .button:hover {
-        background-color: #555960;
-    }
-    .pricing .container .parent-of-boxs  li {
-        padding: 20px 0;
-        position: relative;
-    }
-    .pricing .container .parent-of-boxs  li::after {
-        content: "ProNabowy here not there ProNabowy above any problem because he look like a lion";
-        background-color: black;
-        padding: 5px;
-        width: fit-content;
-        text-align: center;
-        color: white;
-        font-size: 16px;
-        line-height: 1.3;
-        position: absolute;
-        right: -280px;
-        z-index: 999;
-        top: -7px;
-        border-radius: 10px;
-        display: none;
-        transition: var(--main-transation);
-    }
-    .pricing .container .parent-of-boxs .box.PRO  li::after {
-        right: -273px;
-    }
-    .pricing .container .parent-of-boxs  li::before {
-        content: "";
-        border: 12px solid ;
-        border-color: transparent black transparent transparent;
-        position: absolute;
-        right: -3px;
-        bottom: 15px;
-        display: none;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:first-of-type::after {
-        content: "Once you ran out of sms/ voice call alerts they can be purchased";
-        right: -250px;
-        top: 4px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:first-of-type::before {
-        right: 27px;
-        bottom: 15px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(2):after {
-        content: "Showcase your uptime to your custmoers with beautiful  status page !";
-        right: -156px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(2)::before {
-        right: 121px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(3):after {
-        content: "Essential monitoring for websites ssl errors & alerts is a Pro plan feature";
-        right: -275px;
-        top: 2px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(3)::before {
-        right: 2px;
-        bottom: 17px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(4)::after,
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(5)::after {
-        content: "See your website performance in a time !";
-        right: -147px;
-        top: 0px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(4)::before,
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(5)::before {
-        right: 130px;
-        bottom: 19px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(5)::after {
-        content: "Allows you to monitor specific port, e.g port for email service on your servres";
-        top: -12px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(6)::after {
-        content: "Check if a specific keyword is present in the HTML source of a website";
-        top: -8px;
-        right: -180px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(6)::before {
-        right: 97px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(7)::after {
-        content: "Protect your status page with a password. Great for private status pages for internal team.";
-        right: -240px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(7)::before {
-        right: 37px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(8)::after {
-        content: "You can download our mobile app (Android & IOS ) to stay notfied on the go .";
-        right: -210px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(8)::before {
-        right: 67px;
-    }
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(9)::after {
-        content: "Also, there is only 24 hours data retention for response times data in Free plan.";
-        right: -220px;
-    }  
-    .pricing .container .parent-of-boxs .box.Free li:nth-child(9)::before {
-        right: 57px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(1)::after {
-        content: "Includes HTTP (s), port, ping and reponse time monitoring.";
-        top: 5px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(2)::after {
-        content: "Once you ran out of SMS / voice call alerts they can be purchased separately. See FAQs, please ";
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(3)::after {
-        content: "Alerts you 30/14/7 days before your SSL cert. expires or when there is any problem with your cert and visitors can't access the page .";
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(4)::after {
-        content: "Useful for recurring background jop monitoring you send requests to UptimeRobot and we check it if they arrive on time";
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(5)::after {
-        content: "Set threshold (alert when down for 'x' minutes) and recurrence (alert every 'y' minutes) parameters";
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(6)::after {
-        content: "Showcase your uptime to your custmoers with beautiful Status page !";
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(7)::after {
-        content: "Notify your users or custmoers about importand updates via e-mail.";
-        top: 5px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(8)::after {
-        content: "Remove UptimeRobot branding on Status pages";
-        top: 5px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(9)::after {
-        content: "Set up your status page on your domain with a few clicks";
-        top: 5px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO li:nth-child(10)::after {
-        content: "You can auto-disable monitoring for pre-defined periods when you are doing a maintenance on a page";
-    }
-    .pricing .container .parent-of-boxs  li:hover::after,
-    .pricing .container .parent-of-boxs  li:hover::before {
-        display: block;
-    }
-    .pricing .container .parent-of-boxs .box.Free .list li span {
-        font-size: 13px;
-        color: var(--color-of-text);
-    }
-    .pricing .container .parent-of-boxs .box.Free .list li i.one  {
-        color: #ffc800;
-    }
-    .pricing .container .parent-of-boxs .box.Free .list li i:not(.one),
-    .pricing .container .parent-of-boxs .box:not(.Enterprise) li i:not(.one) {
-        border: 1px solid #ccc;
-        border-radius: 50%;
-        padding: 3px;
-        background-color: #eee;
-        font-size: 8px;
-        color: black;
-        margin-left: 5px;
-    }
-    .pricing .container .parent-of-boxs li i.one,
-    .pricing .container .parent-of-boxs li i.two {
-        color: var(--color-of-bottun);
-        margin-right: 5px;
-    }
-    .pricing .container .parent-of-boxs li i.three {
-        padding: 0 5px;
-    }
-    .pricing .container .parent-of-boxs li.one {
-        font-weight: bold;
-    }
-    .pricing .container .parent-of-boxs .box.Free del {
-        text-decoration: line-through;
-        color: var(--color-of-text);
-    }
-    .pricing .container .parent-of-boxs .box.PRO {
-        border: 3px solid var(--color-of-bottun);
-        padding: 0;
-        position: relative;
-        top: -40px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box,
-    .pricing .container .parent-of-boxs .box.PRO .link,
-    .pricing .container .parent-of-boxs .box.PRO .list {
-        padding: 40px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .button {
-        margin-left: 40px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .caption {
-        background-color: var(--color-of-bottun);
-        color: white;
-        width: 100%;
-        font-size: 20px;
-        padding: 10px 0;
-        text-align: center;
-        border-radius: 10px 10px 0 0 ;
-    }
+.pricing .container .parent-of-boxs .box.Free .header-of-box .text h2 {
+  font-size: 35px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.pricing .container .parent-of-boxs .box.Free .header-of-box .text p {
+  color: var(--color-of-text);
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.pricing .container .parent-of-boxs .box.Free .header-of-box .text h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.pricing .container .parent-of-boxs .box.Free .header-of-box .text h5 {
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+.pricing .container .parent-of-boxs img {
+  width: 50px;
+  height: 50px;
+}
+.pricing .container .parent-of-boxs .box.Free .button,
+.pricing .container .parent-of-boxs .box.Enterprise .button {
+  margin-bottom: 50px;
+  background-color: var(--color-of-text);
+}
+.pricing .container .parent-of-boxs .box.Free .button:hover,
+.pricing .container .parent-of-boxs .box.Enterprise .button:hover {
+  background-color: #555960;
+}
+.pricing .container .parent-of-boxs li {
+  padding: 20px 0;
+  position: relative;
+}
+.pricing .container .parent-of-boxs li::after {
+  content: "ProNabowy here not there ProNabowy above any problem because he look like a lion";
+  background-color: black;
+  padding: 5px;
+  width: fit-content;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  line-height: 1.3;
+  position: absolute;
+  right: -280px;
+  z-index: 999;
+  top: -7px;
+  border-radius: 10px;
+  display: none;
+  transition: var(--main-transation);
+}
+.pricing .container .parent-of-boxs .box.PRO li::after {
+  right: -273px;
+}
+.pricing .container .parent-of-boxs li::before {
+  content: "";
+  border: 12px solid;
+  border-color: transparent black transparent transparent;
+  position: absolute;
+  right: -3px;
+  bottom: 15px;
+  display: none;
+}
+.pricing .container .parent-of-boxs .box.Free li:first-of-type::after {
+  content: "Once you ran out of sms/ voice call alerts they can be purchased";
+  right: -250px;
+  top: 4px;
+}
+.pricing .container .parent-of-boxs .box.Free li:first-of-type::before {
+  right: 27px;
+  bottom: 15px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(2):after {
+  content: "Showcase your uptime to your custmoers with beautiful  status page !";
+  right: -156px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(2)::before {
+  right: 121px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(3):after {
+  content: "Essential monitoring for websites ssl errors & alerts is a Pro plan feature";
+  right: -275px;
+  top: 2px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(3)::before {
+  right: 2px;
+  bottom: 17px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(4)::after,
+.pricing .container .parent-of-boxs .box.Free li:nth-child(5)::after {
+  content: "See your website performance in a time !";
+  right: -147px;
+  top: 0px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(4)::before,
+.pricing .container .parent-of-boxs .box.Free li:nth-child(5)::before {
+  right: 130px;
+  bottom: 19px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(5)::after {
+  content: "Allows you to monitor specific port, e.g port for email service on your servres";
+  top: -12px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(6)::after {
+  content: "Check if a specific keyword is present in the HTML source of a website";
+  top: -8px;
+  right: -180px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(6)::before {
+  right: 97px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(7)::after {
+  content: "Protect your status page with a password. Great for private status pages for internal team.";
+  right: -240px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(7)::before {
+  right: 37px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(8)::after {
+  content: "You can download our mobile app (Android & IOS ) to stay notfied on the go .";
+  right: -210px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(8)::before {
+  right: 67px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(9)::after {
+  content: "Also, there is only 24 hours data retention for response times data in Free plan.";
+  right: -220px;
+}
+.pricing .container .parent-of-boxs .box.Free li:nth-child(9)::before {
+  right: 57px;
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(1)::after {
+  content: "Includes HTTP (s), port, ping and reponse time monitoring.";
+  top: 5px;
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(2)::after {
+  content: "Once you ran out of SMS / voice call alerts they can be purchased separately. See FAQs, please ";
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(3)::after {
+  content: "Alerts you 30/14/7 days before your SSL cert. expires or when there is any problem with your cert and visitors can't access the page .";
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(4)::after {
+  content: "Useful for recurring background jop monitoring you send requests to UptimeRobot and we check it if they arrive on time";
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(5)::after {
+  content: "Set threshold (alert when down for 'x' minutes) and recurrence (alert every 'y' minutes) parameters";
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(6)::after {
+  content: "Showcase your uptime to your custmoers with beautiful Status page !";
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(7)::after {
+  content: "Notify your users or custmoers about importand updates via e-mail.";
+  top: 5px;
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(8)::after {
+  content: "Remove UptimeRobot branding on Status pages";
+  top: 5px;
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(9)::after {
+  content: "Set up your status page on your domain with a few clicks";
+  top: 5px;
+}
+.pricing .container .parent-of-boxs .box.PRO li:nth-child(10)::after {
+  content: "You can auto-disable monitoring for pre-defined periods when you are doing a maintenance on a page";
+}
+.pricing .container .parent-of-boxs li:hover::after,
+.pricing .container .parent-of-boxs li:hover::before {
+  display: block;
+}
+.pricing .container .parent-of-boxs .box.Free .list li span {
+  font-size: 13px;
+  color: var(--color-of-text);
+}
+.pricing .container .parent-of-boxs .box.Free .list li i.one {
+  color: #ffc800;
+}
+.pricing .container .parent-of-boxs .box.Free .list li i:not(.one),
+.pricing .container .parent-of-boxs .box:not(.Enterprise) li i:not(.one) {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: #eee;
+  font-size: 8px;
+  color: black;
+  margin-left: 5px;
+}
+.pricing .container .parent-of-boxs li i.one,
+.pricing .container .parent-of-boxs li i.two {
+  color: var(--color-of-bottun);
+  margin-right: 5px;
+}
+.pricing .container .parent-of-boxs li i.three {
+  padding: 0 5px;
+}
+.pricing .container .parent-of-boxs li.one {
+  font-weight: bold;
+}
+.pricing .container .parent-of-boxs .box.Free del {
+  text-decoration: line-through;
+  color: var(--color-of-text);
+}
+.pricing .container .parent-of-boxs .box.PRO {
+  border: 3px solid var(--color-of-bottun);
+  padding: 0;
+  position: relative;
+  top: -40px;
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box,
+.pricing .container .parent-of-boxs .box.PRO .link,
+.pricing .container .parent-of-boxs .box.PRO .list {
+  padding: 40px;
+}
+.pricing .container .parent-of-boxs .box.PRO .button {
+  margin-left: 40px;
+}
+.pricing .container .parent-of-boxs .box.PRO .caption {
+  background-color: var(--color-of-bottun);
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
 
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box h2 {
-        margin-bottom: 20px;
-        font-size: 35px;
-        font-weight: bolder;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box del {
-        color: var(--color-of-text);
-        text-decoration: line-through;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box p::first-letter:not(:last-of-type) {
-        color:var(--color-of-text);
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box h2 span {
-        color: var(--color-of-bottun);
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box p {
-        font-weight: bolder;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box .Special {
-        background-color: #faa05a;
-        width: fit-content;
-        color: white;
-        margin: 10px 0;
-        padding: 2px 5px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box .Checks {
-        font-size: 25px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box .empty {
-        margin-top: 20px;
-        width: 100%;
-        height: 15px;
-        background-color: #ccc;
-        position: relative;
-        border-radius: 10px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box .empty::after {
-        content: "";
-        width: 20%;
-        height: 100%;
-        background-color: black;
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .header-of-box .empty::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        position: absolute;
-        left: 17%;
-        top: -2px;
-        z-index: 5;
-        background-color: var(--color-of-bottun);
-    }
-    .pricing .container .parent-of-boxs .box.PRO .link {
-        padding: 0 40px 40px 40px;
-    }
-    .pricing .container .parent-of-boxs .box.PRO .link a {
-        text-decoration: underline;
-        color: var(--color-of-bottun);
-        font-size: 18px;
-        transition: var(--main-transation);
-    }
-    .pricing .container .parent-of-boxs .box.PRO .link a:hover {
-        text-decoration: none;
-        text-shadow: 0px 0px 10px var(--color-of-bottun);
-    }
-    .pricing .container .parent-of-boxs .box.Enterprise .header-of-box {
-        margin-bottom: 30px;
-    }
-    .pricing .container .parent-of-boxs .box.Enterprise .header-of-box img {
-        width: 100px;
-        height: 100px;
-    }
-    .pricing .container .parent-of-boxs .box.Enterprise .text {
-        color: var(--color-of-text);
-        line-height: 1.5;
-        margin-bottom: 30px;
-    }
-    .pricing .container .parent-of-boxs .box.Enterprise .list h4,
-    .pricing .container .parent-of-boxs .box.Enterprise .list p {
-        padding: 20px;
-    }
-    .pricing .container .parent-of-boxs .box.Enterprise .list h4 i:not(.three) {
-        color: var(--color-of-bottun);
-    }
-    .pricing .container .end-of-pricing {
-        text-align: center;
-        padding: 30px 0;
-    }
-    .pricing .container .end-of-pricing h4 {
-        margin-bottom: 20px;
-    }
-    .pricing .container .end-of-pricing img {
-        max-width: 100%;
-    }
-    @media (max-width:1199px) {
-        .pricing .container .parent-of-boxs .box.PRO {
-            top: 0;
-        }
-        .pricing .container .parent-of-boxs  li:hover::after,
-        .pricing .container .parent-of-boxs  li:hover::before {
-            display: none;
-        }
-    }
-    @media (max-width:767px) {
-        .pricing .container .parent-of-boxs {
-            text-align: center;
-        }
-        .pricing .container .parent-of-boxs .box .header-of-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .pricing .container .parent-of-boxs .button {
-            margin: 10px auto;
-        }
-        .pricing .container .parent-of-boxs .box.PRO .button {
-            margin: 10px auto;
-        }
-    }
+.pricing .container .parent-of-boxs .box.PRO .header-of-box h2 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: bolder;
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box del {
+  color: var(--color-of-text);
+  text-decoration: line-through;
+}
+.pricing
+  .container
+  .parent-of-boxs
+  .box.PRO
+  .header-of-box
+  p::first-letter:not(:last-of-type) {
+  color: var(--color-of-text);
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box h2 span {
+  color: var(--color-of-bottun);
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box p {
+  font-weight: bolder;
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box .Special {
+  background-color: #faa05a;
+  width: fit-content;
+  color: white;
+  margin: 10px 0;
+  padding: 2px 5px;
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box .Checks {
+  font-size: 25px;
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box .empty {
+  margin-top: 20px;
+  width: 100%;
+  height: 15px;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 10px;
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box .empty::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.pricing .container .parent-of-boxs .box.PRO .header-of-box .empty::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 17%;
+  top: -2px;
+  z-index: 5;
+  background-color: var(--color-of-bottun);
+}
+.pricing .container .parent-of-boxs .box.PRO .link {
+  padding: 0 40px 40px 40px;
+}
+.pricing .container .parent-of-boxs .box.PRO .link a {
+  text-decoration: underline;
+  color: var(--color-of-bottun);
+  font-size: 18px;
+  transition: var(--main-transation);
+}
+.pricing .container .parent-of-boxs .box.PRO .link a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px var(--color-of-bottun);
+}
+.pricing .container .parent-of-boxs .box.Enterprise .header-of-box {
+  margin-bottom: 30px;
+}
+.pricing .container .parent-of-boxs .box.Enterprise .header-of-box img {
+  width: 100px;
+  height: 100px;
+}
+.pricing .container .parent-of-boxs .box.Enterprise .text {
+  color: var(--color-of-text);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.pricing .container .parent-of-boxs .box.Enterprise .list h4,
+.pricing .container .parent-of-boxs .box.Enterprise .list p {
+  padding: 20px;
+}
+.pricing .container .parent-of-boxs .box.Enterprise .list h4 i:not(.three) {
+  color: var(--color-of-bottun);
+}
+.pricing .container .end-of-pricing {
+  text-align: center;
+  padding: 30px 0;
+}
+.pricing .container .end-of-pricing h4 {
+  margin-bottom: 20px;
+}
+.pricing .container .end-of-pricing img {
+  max-width: 100%;
+}
+@media (max-width: 1199px) {
+  .pricing .container .parent-of-boxs .box.PRO {
+    top: 0;
+  }
+  .pricing .container .parent-of-boxs li:hover::after,
+  .pricing .container .parent-of-boxs li:hover::before {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .pricing .container .parent-of-boxs {
+    text-align: center;
+  }
+  .pricing .container .parent-of-boxs .box .header-of-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing .container .parent-of-boxs .button {
+    margin: 10px auto;
+  }
+  .pricing .container .parent-of-boxs .box.PRO .button {
+    margin: 10px auto;
+  }
+}
 /* End pricing */
 /* Start Free Account */
-    .Account {
-        padding: var(--main-padding);
-    }
-    .Account .container {
-        text-align: center;
-    }
-    .Account .container h2 {
-        font-size: 45px;
-        max-width: 60%;
-        margin: 20px auto;
-    }
-    .Account .container .button {
-        margin: 20px auto;
-    }
-    .Account .container p {
-        color: var(--color-of-text);
-    }
+.Account {
+  padding: var(--main-padding);
+}
+.Account .container {
+  text-align: center;
+}
+.Account .container h2 {
+  font-size: 45px;
+  max-width: 60%;
+  margin: 20px auto;
+}
+.Account .container .button {
+  margin: 20px auto;
+}
+.Account .container p {
+  color: var(--color-of-text);
+}
 /* End Free Account */
 /* start Footer */
 footer {
-        padding: 100px 0;
-        background-color: var(--Section-background-color);
-    }
-    footer .container h3 a {
-        color: white;
-    }
-    footer .container h3 {
-        color: white;
-        font-size: 35px;
-        display: block;
-        margin-bottom: 20px;
-    }
-    footer .container h5 {
-        color: white;
-        margin-bottom: 20px;
-        font-size: 15px;
-    }
-    footer .container p {
-        color: var(--color-of-text);
-        line-height: 1.5;
-        margin-bottom: 20px;
-    }
-    footer .container .box .icone i {
-        font-size: 20px;
-        background-color: #687790;
-        color: var(--Section-background-color);
-        padding: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        margin-left: 10px;
-    }
-    footer .container .list li a {
-        color: white;
-        display: block;
-        padding: 10px 0;
-        transition: var(--main-transation);
-        width: fit-content;
-    }
-    footer .container .list li.active a {
-        background-color: #faa05a;
-        padding: 3px 10px;
-        font-size: 14px;
-    }
-    footer .container .list li.active a:hover {
-        text-decoration: none;
-    }
-    footer .container .list li a:hover {
-        text-decoration: underline;
-    }
-    footer .container h3 span {
-        color: var(--color-of-bottun);
-    }
-    footer .container .box:last-child .links {
-        flex-wrap: wrap;
-    }
-    footer .container .box:last-child .links img {
-        width: 140px;
-        height: 40px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-    @media (max-width:767px) {
-        footer .container  {
-            text-align: center;
-        }
-        footer .container .list li a {
-            width: 100%;
-            background-color: #1e2a3e;
-            margin-bottom: 10px;
-        }
-    }
+  padding: 100px 0;
+  background-color: var(--Section-background-color);
+}
+footer .container h3 a {
+  color: white;
+}
+footer .container h3 {
+  color: white;
+  font-size: 35px;
+  display: block;
+  margin-bottom: 20px;
+}
+footer .container h5 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+footer .container p {
+  color: var(--color-of-text);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+footer .container .box .icone i {
+  font-size: 20px;
+  background-color: #687790;
+  color: var(--Section-background-color);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 10px;
+}
+footer .container .list li a {
+  color: white;
+  display: block;
+  padding: 10px 0;
+  transition: var(--main-transation);
+  width: fit-content;
+}
+footer .container .list li.active a {
+  background-color: #faa05a;
+  padding: 3px 10px;
+  font-size: 14px;
+}
+footer .container .list li.active a:hover {
+  text-decoration: none;
+}
+footer .container .list li a:hover {
+  text-decoration: underline;
+}
+footer .container h3 span {
+  color: var(--color-of-bottun);
+}
+footer .container .box:last-child .links {
+  flex-wrap: wrap;
+}
+footer .container .box:last-child .links img {
+  width: 140px;
+  height: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  footer .container {
+    text-align: center;
+  }
+  footer .container .list li a {
+    width: 100%;
+    background-color: #1e2a3e;
+    margin-bottom: 10px;
+  }
+}
 /* End Footer */
