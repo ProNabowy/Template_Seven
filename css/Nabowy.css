@@ -17,8 +17,23 @@ body {
   --Section-background-color: #131a26;
   --color-of-bottun: #3bd671;
   --color-of-text: #687790;
+  --white-color: white;
   --main-transation: 0.5s;
   --main-padding: 50px 0;
+  --another-padding: 20px;
+  --main-margin: 20px;
+  --main-font-size: 20px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  /* background-color: #f8f8f8;
+  box-shadow: 0 0 80px #ddd inset; */
+  background-color: var(--Section-background-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-of-bottun);
 }
 /* Start FreemWorks */
 .container {
@@ -27,17 +42,18 @@ body {
 }
 .button {
   width: fit-content;
-  padding: 10px 20px;
-  background-color: var(--color-of-bottun);
+  padding: calc(var(--another-padding) - 10px) var(--another-padding);
+  background-color:  #0a6e2d;
   border-radius: 20px;
   border: none;
+  cursor: pointer;
   transition: var(--main-transation);
 }
 .button:hover {
-  background-color: #0a6e2d;
+  background-color: var(--color-of-bottun);
 }
 .button a {
-  color: white;
+  color: var(--white-color);
   font-weight: bolder;
 }
 .Grid-of-Three-colum {
@@ -85,7 +101,7 @@ body {
 /* End Madia Qurei */
 /* Start Header */
 header {
-  padding: 20px 0;
+  padding: var(--another-padding) 0;
   height: 100px;
   background-color: var(--Section-background-color);
   position: fixed;
@@ -103,7 +119,7 @@ header .container .logo {
 }
 header .container .logo span {
   display: block;
-  margin-right: 20px;
+  margin-right: var(--main-margin);
   background-color: var(--color-of-bottun);
   width: 15px;
   height: 15px;
@@ -112,18 +128,18 @@ header .container .logo span {
 header .container .logo .name {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--white-color);
 }
 header .container .logo .name h2 {
-  font-size: 40px;
+  font-size: calc(var(--main-font-size) + 20px);
 }
 header .container .logo .name div {
   background-color: #faa05a;
   padding: 1px 3px;
-  font-size: 12px;
+  font-size: calc(var(--main-font-size) - 8px);
   width: fit-content;
   align-self: flex-end;
-  color: white;
+  color: var(--white-color);
 }
 header .container .list {
   flex-basis: 50%;
@@ -139,29 +155,30 @@ header .container .list ul li {
 header .container .list ul li a {
   display: block;
   transition: var(--main-transation);
-  color: white;
-  font-size: 18px;
+  color: var(--white-color);
+  font-size: calc(var(--main-font-size) - 2px);
   font-weight: bold;
 }
 header .container .list ul li a:hover {
-  padding-left: 10px;
+  padding-left: calc(var(--another-padding) - 10px);
   color: var(--color-of-bottun);
 }
 header .container form {
   flex-basis: 25%;
+  align-items: center;
 }
 header .container form label {
-  font-size: 18px;
-  margin-right: 20px;
-  color: white;
+  font-size: calc(var(--main-font-size) - 2px);
+  margin-right: var(--main-margin);
+  color: var(--white-color);
   cursor: pointer;
 }
 header .container form input {
   background-color: var(--color-of-bottun);
-  color: white;
-  font-size: 15px;
+  color: var(--white-color);
+  font-size: calc(var(--main-font-size) - 5px);
   font-weight: bolder;
-  padding: 7px 10px;
+  padding: calc(var(--another-padding) - 13px) calc(var(--another-padding) - 10px);
   border-radius: 25px;
   border: 0;
   cursor: pointer;
@@ -175,7 +192,7 @@ header .container form input {
   }
   header .container .logo {
     flex-basis: 100%;
-    margin-bottom: 15px;
+    margin-bottom: calc(var(--main-margin) - 5px);
   }
   header .container .list {
     flex-basis: 65%;
@@ -191,7 +208,7 @@ header .container form input {
   }
   header .container .list {
     flex-basis: 100%;
-    margin-bottom: 15px;
+    margin-bottom: calc(var(--main-margin) - 5px);
   }
   header .container .list ul {
     display: flex;
@@ -199,15 +216,15 @@ header .container form input {
   }
   header .container .list ul li {
     background-color: #1e2a3e;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: calc(var(--main-margin) - 10px);
+    padding: calc(var(--another-padding) - 10px);
   }
   header .container .list ul li a {
-    font-size: 20px;
+    font-size: var(--main-font-size);
   }
   header .container form {
     flex-basis: 100%;
-    margin-bottom: 15px;
+    margin-bottom: calc(var(--main-margin) - 5px);
   }
 }
 /* End Header */
@@ -218,20 +235,21 @@ header .container form input {
 }
 .leading .container .text {
   flex-basis: 50%;
-  color: white;
+  color: var(--white-color);
 }
 .leading .container .text h2 {
-  font-size: 46px;
-  margin-bottom: 30px;
+  font-size: calc(var(--main-font-size) + 20px);
+  margin-bottom: calc(var(--main-margin) + 10px);
   position: relative;
 }
 .leading .container .text h2::after {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background-color: var(--color-of-bottun);
   border-radius: 50%;
-  bottom: 13px;
+  bottom: 8px;
+  margin-left: calc(var(--main-margin) - 15px);
   position: absolute;
 }
 .leading .container .text span {
@@ -239,7 +257,7 @@ header .container form input {
 }
 .leading .container .text p {
   font-weight: bolder;
-  margin-bottom: 30px;
+  margin-bottom: calc(var(--main-margin) + 10px);
 }
 .leading .container .imge {
   flex-basis: 48%;
@@ -252,7 +270,7 @@ header .container form input {
   color: #687790;
 }
 .leading > p span {
-  color: white;
+  color: var(--white-color);
   font-weight: bolder;
 }
 @media (max-width: 767px) {
@@ -266,8 +284,11 @@ header .container form input {
     flex-basis: 100%;
     text-align: center;
   }
+  .leading .container .text h2 {
+    font-size: calc(var(--main-font-size) + 30px);
+  }
   .leading .container .text .button {
-    margin: 10px auto;
+    margin: calc(var(--main-margin) - 10px) auto;
   }
   .leading .container .imge {
     flex-basis: 100%;
@@ -296,15 +317,15 @@ header .container form input {
   background-color: #f5f4f4;
 }
 .monitored .container h2 {
-  font-size: 45px;
+  font-size: calc(var(--main-font-size) + 20px);
   font-weight: bolder;
   max-width: 80%;
   text-align: center;
-  margin: 10px auto;
+  margin: calc(var(--main-margin) - 10px) auto;
 }
 @media (max-width: 767px) {
   .monitored .container h2 {
-    font-size: 30px;
+    font-size: calc(var(--main-font-size) + 10px);
     max-width: 100%;
   }
 }
@@ -312,7 +333,7 @@ header .container form input {
   color: var(--color-of-bottun);
 }
 .monitored .container .parent-of-box .box {
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: 10px;
   padding: 30px;
   text-align: center;
@@ -322,18 +343,18 @@ header .container form input {
 }
 .monitored .container .parent-of-box .box .imge img {
   max-width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: calc(var(--main-margin) - 5px);
 }
 .monitored .container .parent-of-box .box .text h3 {
-  margin-bottom: 15px;
-  font-size: 22px;
+  margin-bottom: calc(var(--main-margin) - 5px);
+  font-size: calc(var(--main-font-size) + 2px);
 }
 .monitored .container .parent-of-box .box .text p {
   line-height: 1.6;
   color: var(--color-of-text);
 }
 .monitored .container .center {
-  margin: 20px 0 0 0;
+  margin: var(--main-margin) 0 0 0;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -348,20 +369,20 @@ header .container form input {
 }
 .features .container h3 {
   text-align: center;
-  margin: 20px 0 40px 0;
-  font-size: 35px;
+  margin: var(--main-margin) 0 calc(var(--main-margin) + 20px) 0;
+  font-size: calc(var(--main-font-size) + 15px);
   font-weight: bolder;
 }
 .features .container h3 span {
   color: var(--color-of-bottun);
 }
 .features .container .parent-of-box .box h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
+  font-size: calc(var(--main-font-size) + 2px);
+  margin-bottom: var(--main-margin);
 }
 .features .container .parent-of-box .box p {
   color: var(--color-of-text);
-  font-size: 18px;
+  font-size: calc(var(--main-font-size) - 2px);
   line-height: 1.5;
 }
 @media (max-width: 767px) {
@@ -376,7 +397,7 @@ header .container form input {
   background-color: var(--Section-background-color);
 }
 .Downtime .container {
-  color: white;
+  color: var(--white-color);
 }
 .Downtime .container .parent-of-box {
   flex-basis: 75%;
@@ -449,24 +470,24 @@ header .container form input {
   content: "Get important monitor status updates in your Discord messages.";
 }
 .Downtime .container .parent-of-box .box.nine i {
-  font-size: 25px;
+  font-size: calc(var(--main-font-size) + 5px);
   padding: 5px;
   background-color: #7289da;
 }
 .Downtime .container .parent-of-box .box.nine::before {
   content: "New";
   background-color: var(--color-of-bottun);
-  color: white;
+  color: var(--white-color);
   font-weight: bolder;
-  font-size: 20px;
+  font-size: var(--main-font-size);
   padding: 1px 15px;
   position: absolute;
   right: 30px;
   top: 30px;
 }
 .Downtime .container .parent-of-box .box i {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: calc(var(--main-font-size) + 20px);
+  margin-bottom: var(--main-margin);
 }
 .Downtime .container .parent-of-box .box p {
   font-weight: bolder;
@@ -475,8 +496,13 @@ header .container form input {
   flex-basis: 22%;
 }
 .Downtime .container .contact-of-text h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: calc(var(--main-font-size) + 20px);
+  margin-bottom: var(--main-margin);
+}
+@media(max-width:767px) {
+  .Downtime .container .contact-of-text h2 {
+    font-size: calc(var(--main-font-size) + 10px);
+  }
 }
 .Downtime .container .contact-of-text h2 span {
   color: var(--color-of-bottun);
@@ -485,13 +511,13 @@ header .container form input {
 .Downtime .container .contact-of-text p {
   line-height: 1.6;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
 }
 .Downtime .container .contact-of-text a {
   text-decoration: underline;
   font-weight: bolder;
-  font-size: 20px;
-  color: white;
+  font-size: var(--main-font-size);
+  color: var(--white-color);
   transition: var(--main-transation);
 }
 .Downtime .container .contact-of-text a:hover {
@@ -529,9 +555,14 @@ header .container form input {
   flex-basis: 48%;
 }
 .Uptime .container .text h2 {
-  font-size: 45px;
+  font-size: calc(var(--main-font-size) + 20px);
   font-weight: bolder;
-  margin-bottom: 40px;
+  margin-bottom: calc(var(--main-margin) + 20px);
+}
+@media(max-width: 767px) {
+  .Uptime .container .text h2 {
+    font-size: calc(var(--main-font-size) + 10px);
+  }
 }
 .Uptime .container .text h2 span {
   color: var(--color-of-bottun);
@@ -539,12 +570,12 @@ header .container form input {
 .Uptime .container .text p {
   font-weight: bold;
   line-height: 1.6;
-  font-size: 18px;
-  margin-bottom: 40px;
+  font-size: calc(var(--main-font-size) - 2px);
+  margin-bottom: calc(var(--main-margin) + 20px);
 }
 .Uptime .container .text .links img {
   height: 100%;
-  margin-left: 15px;
+  margin-left: calc(var(--main-margin) - 5px);
 }
 @media (max-width: 991px) {
   .Uptime .container {
@@ -552,7 +583,7 @@ header .container form input {
   }
   .Uptime .container .imge {
     flex-basis: 100%;
-    margin-bottom: 50px;
+    margin-bottom: calc(var(--main-margin) + 30px);
   }
 
   .Uptime .container .imge img {
@@ -576,23 +607,28 @@ header .container form input {
   flex-basis: 48%;
 }
 .Inform .container .text h2 {
-  font-size: 45px;
+  font-size: calc(var(--main-font-size) + 20px);
   font-weight: bolder;
-  margin-bottom: 30px;
+  margin-bottom: calc(var(--main-margin) + 10px);
+}
+@media(max-width: 767px) {
+  .Inform .container .text h2  {
+    font-size: calc(var(--main-font-size) + 10px);
+  }
 }
 .Inform .container .text h2 span {
   color: var(--color-of-bottun);
 }
 .Inform .container .text p {
   line-height: 1.6;
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: calc(var(--main-font-size) - 2px);
+  margin-bottom: calc(var(--main-margin) + 10px);
   font-weight: bold;
 }
 .Inform .container .links a {
   color: var(--color-of-bottun);
   text-decoration: underline;
-  font-size: 18px;
+  font-size: calc(var(--main-font-size) - 2px);
   font-weight: bold;
 }
 .Inform .container .imge {
@@ -619,7 +655,7 @@ header .container form input {
   }
   .Inform .container .text {
     flex-basis: 100%;
-    margin-bottom: 30px;
+    margin-bottom: calc(var(--main-margin) + 10px);
     text-align: center;
   }
   .Inform .container .imge {
@@ -643,10 +679,10 @@ header .container form input {
   text-align: center;
 }
 .endpoints .container q {
-  font-size: 40px;
+  font-size: calc(var(--main-font-size) + 20px);
   display: block;
-  color: white;
-  margin-bottom: 20px;
+  color: var(--white-color);
+  margin-bottom: var(--main-margin);
 }
 .endpoints .container q span {
   color: var(--color-of-bottun);
@@ -654,21 +690,29 @@ header .container form input {
 .endpoints .container .imge {
   align-items: center;
 }
+.endpoints .container .imge a {
+  font-size: 0;
+}
 .endpoints .container img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin-bottom: var(--main-margin);
 }
 .endpoints .container a {
+  color: transparent;
+  user-select: none;
+}
+.endpoints .container span {
   color: var(--color-of-bottun);
-  font-size: 25px;
-  margin-left: 20px;
+  font-size: calc(var(--main-font-size) + 5px);
+  margin-left: var(--main-margin);
 }
 .endpoints .icone {
   display: flex;
   width: fit-content;
   height: fit-content;
-  margin: 10px auto;
+  margin: calc(var(--main-margin) + 10px) auto;
 }
 .endpoints .icone span {
   margin-left: 4px;
@@ -682,7 +726,7 @@ header .container form input {
 }
 @media (max-width: 767px) {
   .endpoints .container q {
-    font-size: 25px;
+    font-size: calc(var(--main-font-size) + 5px);
   }
   .endpoints .container .imge {
     flex-wrap: wrap;
@@ -701,9 +745,9 @@ header .container form input {
   margin-bottom: 100px;
 }
 .pricing .container .header-of-pricing h2 {
-  font-size: 50px;
+  font-size: calc(var(--main-font-size) + 20px);
   font-weight: bolder;
-  margin-bottom: 30px;
+  margin-bottom: calc(var(--main-margin) + 10px);
 }
 .pricing .container .header-of-pricing h2 span {
   color: var(--color-of-bottun);
@@ -712,43 +756,35 @@ header .container form input {
   align-items: center;
 }
 .pricing .container .header-of-pricing .icone .annual {
-  margin-right: 15px;
+  margin-right: calc(var(--main-margin) - 5px);
 }
 .pricing .container .header-of-pricing .icone .annual p {
-  margin-bottom: 10px;
+  margin-bottom: calc(var(--main-margin) + 10px);
   font-weight: bold;
-  font-size: 18px;
+  font-size: calc(var(--main-font-size) - 2px);
 }
 .pricing .container .header-of-pricing .icone .annual a {
   display: block;
   background-color: var(--color-of-bottun);
   padding: 2px 8px;
-  color: white;
+  color: var(--white-color);
   font-weight: bold;
 }
-.pricing .container .header-of-pricing .icone span {
-  display: block;
-  background-color: black;
-  width: 60px;
-  height: 20px;
-  border-radius: 10px;
+.pricing .container .icone #slider {
+  width: 50px ;
 }
-.pricing .container .header-of-pricing .icone span span {
-  display: block;
+.pricing .container .icone #slider::-webkit-slider-thumb {
+  box-shadow: initial;
   background-color: var(--color-of-bottun);
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 2px;
 }
 .pricing .container .header-of-pricing .icone p {
-  margin-left: 15px;
+  margin-left: calc(var(--main-margin) - 5px);
   color: var(--color-of-text);
-  font-size: 18px;
+  font-size: calc(var(--main-font-size) - 2px);
   font-weight: bolder;
 }
 .pricing .container .parent-of-boxs .box {
-  background-color: white;
+  background-color: var(--white-color);
   padding: 40px;
   border-radius: 20px;
 }
@@ -758,23 +794,23 @@ header .container form input {
 }
 
 .pricing .container .parent-of-boxs .box.Free .header-of-box .text h2 {
-  font-size: 35px;
+  font-size: calc(var(--main-font-size) + 15px);
   font-weight: bolder;
-  margin-bottom: 30px;
+  margin-bottom: calc(var(--main-margin) + 10px);
 }
 .pricing .container .parent-of-boxs .box.Free .header-of-box .text p {
   color: var(--color-of-text);
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: calc(var(--main-font-size) - 2px);
+  margin-bottom: calc(var(--main-margin) + 10px);
 }
 .pricing .container .parent-of-boxs .box.Free .header-of-box .text h3 {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: calc(var(--main-margin) + 10px);
 }
 .pricing .container .parent-of-boxs .box.Free .header-of-box .text h5 {
   font-weight: bold;
-  margin-bottom: 50px;
-  font-size: 18px;
+  margin-bottom: calc(var(--main-margin) + 30px);
+  font-size: calc(var(--main-font-size) - 2px);
 }
 .pricing .container .parent-of-boxs img {
   width: 50px;
@@ -782,7 +818,7 @@ header .container form input {
 }
 .pricing .container .parent-of-boxs .box.Free .button,
 .pricing .container .parent-of-boxs .box.Enterprise .button {
-  margin-bottom: 50px;
+  margin-bottom: calc(var(--main-margin) + 30px);
   background-color: var(--color-of-text);
 }
 .pricing .container .parent-of-boxs .box.Free .button:hover,
@@ -799,8 +835,8 @@ header .container form input {
   padding: 5px;
   width: fit-content;
   text-align: center;
-  color: white;
-  font-size: 16px;
+  color: var(--white-color);
+  font-size: calc(var(--main-font-size) - 4px);
   line-height: 1.3;
   position: absolute;
   right: -280px;
@@ -930,7 +966,7 @@ header .container form input {
   display: block;
 }
 .pricing .container .parent-of-boxs .box.Free .list li span {
-  font-size: 13px;
+  font-size: calc(var(--main-font-size) - 7px);
   color: var(--color-of-text);
 }
 .pricing .container .parent-of-boxs .box.Free .list li i.one {
@@ -942,7 +978,7 @@ header .container form input {
   border-radius: 50%;
   padding: 3px;
   background-color: #eee;
-  font-size: 8px;
+  font-size: calc(var(--main-font-size) - 12px);
   color: black;
   margin-left: 5px;
 }
@@ -971,23 +1007,24 @@ header .container form input {
 .pricing .container .parent-of-boxs .box.PRO .link,
 .pricing .container .parent-of-boxs .box.PRO .list {
   padding: 40px;
+  padding-bottom: 15px;
 }
 .pricing .container .parent-of-boxs .box.PRO .button {
-  margin-left: 40px;
+  margin-left: calc(var(--main-margin) + 20px);
 }
 .pricing .container .parent-of-boxs .box.PRO .caption {
   background-color: var(--color-of-bottun);
-  color: white;
+  color: var(--white-color);
   width: 100%;
-  font-size: 20px;
+  font-size: var(--main-font-size);
   padding: 10px 0;
   text-align: center;
   border-radius: 10px 10px 0 0;
 }
 
 .pricing .container .parent-of-boxs .box.PRO .header-of-box h2 {
-  margin-bottom: 20px;
-  font-size: 35px;
+  margin-bottom: var(--main-margin);
+  font-size: calc(var(--main-font-size) + 15px);
   font-weight: bolder;
 }
 .pricing .container .parent-of-boxs .box.PRO .header-of-box del {
@@ -1011,41 +1048,40 @@ header .container form input {
 .pricing .container .parent-of-boxs .box.PRO .header-of-box .Special {
   background-color: #faa05a;
   width: fit-content;
-  color: white;
-  margin: 10px 0;
+  color: var(--white-color);
+  margin: calc(var(--main-margin) - 10px) 0;
   padding: 2px 5px;
 }
 .pricing .container .parent-of-boxs .box.PRO .header-of-box .Checks {
-  font-size: 25px;
+  font-size: calc(var(--main-font-size) + 5px);
 }
-.pricing .container .parent-of-boxs .box.PRO .header-of-box .empty {
-  margin-top: 20px;
-  width: 100%;
+.pricing .container .parent-of-boxs .box.PRO .header-of-box input {
+  margin-top: var(--main-margin);
   height: 15px;
-  background-color: #ccc;
-  position: relative;
-  border-radius: 10px;
+  border: none;
+  outline: none;
 }
-.pricing .container .parent-of-boxs .box.PRO .header-of-box .empty::after {
-  content: "";
-  width: 20%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+#slider {
+  width: 100px;
+  height: 17px;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--Section-background-color);
 }
-.pricing .container .parent-of-boxs .box.PRO .header-of-box .empty::before {
-  content: "";
-  width: 20px;
-  height: 20px;
+#slider::-webkit-slider-runnable-track {
+  border-radius: 15px;
+}
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
-  position: absolute;
-  left: 17%;
-  top: -2px;
-  z-index: 5;
-  background-color: var(--color-of-bottun);
+  cursor: pointer;
+  border: 1px solid var(--color-of-bottun);
+  background-color: var(--Section-background-color);
+  box-shadow: -407px 0 0 400px #00fd0a;
 }
 .pricing .container .parent-of-boxs .box.PRO .link {
   padding: 0 40px 40px 40px;
@@ -1053,7 +1089,7 @@ header .container form input {
 .pricing .container .parent-of-boxs .box.PRO .link a {
   text-decoration: underline;
   color: var(--color-of-bottun);
-  font-size: 18px;
+  font-size: calc(var(--main-font-size) - 2px);
   transition: var(--main-transation);
 }
 .pricing .container .parent-of-boxs .box.PRO .link a:hover {
@@ -1061,7 +1097,7 @@ header .container form input {
   text-shadow: 0px 0px 10px var(--color-of-bottun);
 }
 .pricing .container .parent-of-boxs .box.Enterprise .header-of-box {
-  margin-bottom: 30px;
+  margin-bottom: calc(var(--main-margin) + 10px);
 }
 .pricing .container .parent-of-boxs .box.Enterprise .header-of-box img {
   width: 100px;
@@ -1070,7 +1106,7 @@ header .container form input {
 .pricing .container .parent-of-boxs .box.Enterprise .text {
   color: var(--color-of-text);
   line-height: 1.5;
-  margin-bottom: 30px;
+  margin-bottom: calc(var(--main-margin) + 10px);
 }
 .pricing .container .parent-of-boxs .box.Enterprise .list h4,
 .pricing .container .parent-of-boxs .box.Enterprise .list p {
@@ -1084,7 +1120,7 @@ header .container form input {
   padding: 30px 0;
 }
 .pricing .container .end-of-pricing h4 {
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
 }
 .pricing .container .end-of-pricing img {
   max-width: 100%;
@@ -1099,6 +1135,9 @@ header .container form input {
   }
 }
 @media (max-width: 767px) {
+  .pricing .container .header-of-pricing h2 {
+    font-size: calc(var(--main-font-size) + 10px);
+  }
   .pricing .container .parent-of-boxs {
     text-align: center;
   }
@@ -1108,10 +1147,10 @@ header .container form input {
     align-items: center;
   }
   .pricing .container .parent-of-boxs .button {
-    margin: 10px auto;
+    margin: calc(var(--main-margin) - 10px) auto;
   }
   .pricing .container .parent-of-boxs .box.PRO .button {
-    margin: 10px auto;
+    margin: calc(var(--main-margin) - 10px) auto;
   }
 }
 /* End pricing */
@@ -1123,12 +1162,18 @@ header .container form input {
   text-align: center;
 }
 .Account .container h2 {
-  font-size: 45px;
+  font-size: calc(var(--main-font-size) + 20px);
   max-width: 60%;
-  margin: 20px auto;
+  margin: var(--main-margin) auto;
+}
+@media(max-width: 767px) {
+  .Account .container h2 {
+    font-size: calc(var(--main-font-size) + 10px);
+    max-width: 100%;
+  }
 }
 .Account .container .button {
-  margin: 20px auto;
+  margin: var(--main-margin) auto;
 }
 .Account .container p {
   color: var(--color-of-text);
@@ -1140,44 +1185,45 @@ footer {
   background-color: var(--Section-background-color);
 }
 footer .container h3 a {
-  color: white;
+  color: var(--white-color);
 }
 footer .container h3 {
-  color: white;
-  font-size: 35px;
+  color: var(--white-color);
+  font-size: var(--main-font-size);
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
 }
 footer .container h5 {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 15px;
+  color: var(--white-color);
+  margin-bottom: var(--main-margin);
+  font-size: calc(var(--main-font-size) - 7px);
 }
 footer .container p {
   color: var(--color-of-text);
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: var(--main-margin);
 }
 footer .container .box .icone i {
-  font-size: 20px;
+  font-size: var(--main-font-size);
   background-color: #687790;
   color: var(--Section-background-color);
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: calc(var(--main-margin) - 10px);
 }
 footer .container .list li a {
-  color: white;
+  color: var(--white-color);
   display: block;
   padding: 10px 0;
+  font-size: calc(var(--main-font-size) - 7px);
   transition: var(--main-transation);
   width: fit-content;
 }
 footer .container .list li.active a {
   background-color: #faa05a;
   padding: 3px 10px;
-  font-size: 14px;
+  font-size: calc(var(--main-font-size) - 6px);
 }
 footer .container .list li.active a:hover {
   text-decoration: none;
@@ -1194,8 +1240,8 @@ footer .container .box:last-child .links {
 footer .container .box:last-child .links img {
   width: 140px;
   height: 40px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: calc(var(--main-margin) - 10px);
+  margin-bottom: calc(var(--main-margin) - 10px);
 }
 @media (max-width: 767px) {
   footer .container {
@@ -1204,7 +1250,7 @@ footer .container .box:last-child .links img {
   footer .container .list li a {
     width: 100%;
     background-color: #1e2a3e;
-    margin-bottom: 10px;
+    margin-bottom: calc(var(--main-margin) - 10px);
   }
 }
 /* End Footer */
