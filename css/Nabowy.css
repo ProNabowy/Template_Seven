@@ -227,6 +227,21 @@ header .container form input {
     margin-bottom: calc(var(--main-margin) - 5px);
   }
 }
+    /* 
+        icons
+    */
+    .fa-bars,
+    .fa-xmark {
+        font-size: 40px;
+        right: 30px;
+        top: 30px;
+        color: white;
+        position: absolute;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+    }
 /* End Header */
 /* Start leading */
 .leading {
